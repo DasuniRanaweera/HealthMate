@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">HealthMate</string>
+
     <string name="healthmate_title">HealthMate!</string>
     <string name="your_daily_wellness_tracker">Your daily wellness tracker</string>
     <string name="add_record">Add Record</string>
@@ -19,4 +19,6 @@
     <string name="healthmate_logo">HealthMate logo</string>
     <string name="welcome_app_name">Health<font color="#008E91">Mate</font></string>
     <string name="today_s_summary">Today\'s Summary</string>
+    <string name="wellness_dashboard">Your wellness dashboard</string>
+    <string name="dashboard_subtitle">Choose what you would like to do</string>
 </resources>

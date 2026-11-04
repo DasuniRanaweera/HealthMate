@@ -18,14 +18,14 @@
         <ImageView
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:contentDescription="HealthMate logo"
+            android:contentDescription="@string/healthmate_logo"
             android:src="@drawable/healthmate_logo" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
-            android:text="HealthMate"
+            android:text="@string/healthmate"
             android:textColor="#34235F"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -35,7 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
-        android:text="Your wellness dashboard"
+        android:text="@string/wellness_dashboard"
         android:textColor="#26134F"
         android:textSize="30sp"
         android:textStyle="bold" />
@@ -44,7 +44,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Choose what you would like to do"
+        android:text="@string/dashboard_subtitle"
         android:textColor="#5C5771"
         android:textSize="16sp" />
 
