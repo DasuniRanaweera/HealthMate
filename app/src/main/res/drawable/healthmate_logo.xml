@@ -1,0 +1,37 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+
+    <!-- Rounded purple background -->
+    <path
+        android:pathData="M28,4 H92 C105,4 116,15 116,28 V92 C116,105 105,116 92,116 H28 C15,116 4,105 4,92 V28 C4,15 15,4 28,4 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="4"
+                android:startY="60"
+                android:endX="116"
+                android:endY="60"
+                android:startColor="#6847B5"
+                android:endColor="#16A6A2"
+                android:type="linear" />
+        </aapt:attr>
+    </path>
+
+    <!-- White heart -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M60,95 L25,62 C10,47 17,27 35,27 C46,27 54,33 60,41 C66,33 74,27 85,27 C103,27 110,47 95,62 Z" />
+
+    <!-- Heartbeat line -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#167F92"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M31,59 L44,59 L50,48 L59,72 L67,54 L72,59 L89,59" />
+
+</vector>

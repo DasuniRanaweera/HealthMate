@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F5FF"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- Small logo and app name -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="HealthMate logo"
+            android:src="@drawable/healthmate_logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="HealthMate"
+            android:textColor="#34235F"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Your wellness dashboard"
+        android:textColor="#26134F"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Choose what you would like to do"
+        android:textColor="#5C5771"
+        android:textSize="16sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonAddRecord"
+        android:drawableStart="@drawable/ic_add_record"
+        android:drawableTint="#FFFFFF"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/menu_button_purple"
+        android:backgroundTint="@null"
+        android:text="@string/add_record"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonViewHistory"
+        android:drawableStart="@drawable/ic_history_clock"
+        android:drawableTint="#34235F"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/menu_button_light"
+        android:backgroundTint="@null"
+        android:text="@string/view_history"
+        android:textAllCaps="false"
+        android:textColor="#34235F"
+        android:textSize="18sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonTodaySummary"
+        android:drawableStart="@drawable/ic_summary"
+        android:drawableTint="#075C60"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/menu_button_teal"
+        android:backgroundTint="@null"
+        android:enabled="true"
+        android:text="@string/today_s_summary"
+        android:textAllCaps="false"
+        android:textColor="#075C60"
+        android:textSize="18sp" />
+
+</LinearLayout>
