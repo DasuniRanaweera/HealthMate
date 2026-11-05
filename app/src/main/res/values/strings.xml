@@ -21,4 +21,9 @@
     <string name="today_s_summary">Today\'s Summary</string>
     <string name="wellness_dashboard">Your wellness dashboard</string>
     <string name="dashboard_subtitle">Choose what you would like to do</string>
+    <string name="water_goal_progress">Water goal progress</string>
+    <string name="water_illustration">Water illustration</string>
+    <string name="water_reminder">Water reminder</string>
+    <string name="update_your_record">Update Your Record</string>
+    <string name="update_record">Update Record</string>
 </resources>

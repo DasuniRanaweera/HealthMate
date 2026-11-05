@@ -26,6 +26,12 @@ class SummaryActivity : AppCompatActivity() {
         val summaryCalories = findViewById<android.widget.TextView>(R.id.textSummaryCalories)
         val summaryWater = findViewById<android.widget.TextView>(R.id.textSummaryWater)
 
+        val waterGoalText = findViewById<android.widget.TextView>(R.id.textWaterGoal)
+        val waterProgress = findViewById<android.widget.ProgressBar>(R.id.progressWater)
+        val waterMessage = findViewById<android.widget.TextView>(R.id.textWaterMessage)
+
+        val waterGoal = 3000L
+
         lifecycleScope.launch {
             repeatOnLifecycle(androidx.lifecycle.Lifecycle.State.STARTED) {
                 viewModel.historyState.collect { state ->
@@ -37,12 +43,24 @@ class SummaryActivity : AppCompatActivity() {
                             summarySteps.text = "Loading records..."
                             summaryCalories.text = ""
                             summaryWater.text = ""
+
+                            waterGoalText.text = "Example water goal: $waterGoal ml"
+                            waterProgress.progress = 0
+                            waterMessage.text = ""
+                            waterMessage.background = null
+                            waterMessage.setPadding(0, 0, 0, 0)
                         }
 
                         state.error != null -> {
                             summarySteps.text = "Could not load records."
                             summaryCalories.text = ""
                             summaryWater.text = ""
+
+                            waterGoalText.text = "Example water goal: $waterGoal ml"
+                            waterProgress.progress = 0
+                            waterMessage.text = ""
+                            waterMessage.background = null
+                            waterMessage.setPadding(0, 0, 0, 0)
                         }
 
                         else -> {
@@ -57,6 +75,26 @@ class SummaryActivity : AppCompatActivity() {
                             summarySteps.text = "Steps: $totalSteps"
                             summaryCalories.text = "Calories: $totalCalories kcal"
                             summaryWater.text = "Water: $totalWater ml"
+
+                            waterGoalText.text = "Your water goal: $totalWater / $waterGoal ml"
+
+// The bar stops at 100%,  if the recorded amount exceeds the goal.
+                            val progress = ((totalWater.coerceAtMost(waterGoal) * 100) / waterGoal).toInt()
+                            waterProgress.progress = progress
+
+                            if (totalWater >= waterGoal) {
+                                waterMessage.text =
+                                    "🏆 Goal reached!\n\nYou reached your example water goal today."
+
+                                waterMessage.setBackgroundResource(R.drawable.menu_button_teal)
+
+                                val padding = (20 * resources.displayMetrics.density).toInt()
+                                waterMessage.setPadding(padding, padding, padding, padding)
+                            } else {
+                                waterMessage.text = "You have recorded $totalWater ml today."
+                                waterMessage.background = null
+                                waterMessage.setPadding(0, 0, 0, 0)
+                            }
                         }
                     }
                 }

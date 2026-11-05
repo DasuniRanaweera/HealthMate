@@ -60,6 +60,12 @@ class AddRecordActivity : AppCompatActivity() {
 
         val editingRecordId = intent.getLongExtra("record_id", 0L)
 
+        if (editingRecordId > 0) {
+            val title = findViewById<android.widget.TextView>(R.id.titleAddRecord)
+            title.setText(R.string.update_your_record)
+            saveButton.setText(R.string.update_record)
+        }
+
         if (editingRecordId > 0 && savedInstanceState == null) {
             val existingDate = intent.getStringExtra("record_date")
 
@@ -124,7 +130,7 @@ class AddRecordActivity : AppCompatActivity() {
             )
 
             viewModel.saveRecord(record)
-            viewModel.saveRecord(record)
+
         }
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
