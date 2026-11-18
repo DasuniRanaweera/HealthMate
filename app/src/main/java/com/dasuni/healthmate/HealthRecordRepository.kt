@@ -20,7 +20,6 @@ class HealthRecordRepository(context: Context) {
             put("calories", record.calories)
             put("water", record.water)
         }
-
         return HealthDatabaseHelper(appContext).use { helper ->
             helper.writableDatabase.insertOrThrow(
                 "health_records",

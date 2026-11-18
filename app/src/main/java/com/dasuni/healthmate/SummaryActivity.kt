@@ -84,7 +84,7 @@ class SummaryActivity : AppCompatActivity() {
 
                             if (totalWater >= waterGoal) {
                                 waterMessage.text =
-                                    "🏆 Goal reached!\n\nYou reached your example water goal today."
+                                    "🏆 Goal reached!\n\nYou reached your water goal today."
 
                                 waterMessage.setBackgroundResource(R.drawable.menu_button_teal)
 
