@@ -78,6 +78,8 @@
         android:hint="@string/steps_walked"
         android:inputType="number"
         android:maxLines="1"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
         app:layout_constraintTop_toBottomOf="@id/buttonSelectDate"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -93,6 +95,8 @@
         android:hint="@string/calories_burned_kcal"
         android:inputType="number"
         android:maxLines="1"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
         app:layout_constraintTop_toBottomOf="@id/inputSteps"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -108,6 +112,8 @@
         android:hint="@string/water_intake_ml"
         android:inputType="number"
         android:maxLines="1"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
         app:layout_constraintTop_toBottomOf="@id/inputCalories"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
