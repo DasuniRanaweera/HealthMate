@@ -29,6 +29,7 @@ class SummaryActivity : AppCompatActivity() {
         val waterGoalText = findViewById<android.widget.TextView>(R.id.textWaterGoal)
         val waterProgress = findViewById<android.widget.ProgressBar>(R.id.progressWater)
         val waterMessage = findViewById<android.widget.TextView>(R.id.textWaterMessage)
+        val waterRemaining = findViewById<android.widget.TextView>(R.id.textWaterRemaining)
 
         val waterGoal = 3000L
 
@@ -47,6 +48,7 @@ class SummaryActivity : AppCompatActivity() {
                             waterGoalText.text = "Example water goal: $waterGoal ml"
                             waterProgress.progress = 0
                             waterMessage.text = ""
+                            waterRemaining.visibility = android.view.View.GONE
                             waterMessage.background = null
                             waterMessage.setPadding(0, 0, 0, 0)
                         }
@@ -59,6 +61,7 @@ class SummaryActivity : AppCompatActivity() {
                             waterGoalText.text = "Example water goal: $waterGoal ml"
                             waterProgress.progress = 0
                             waterMessage.text = ""
+                            waterRemaining.visibility = android.view.View.GONE
                             waterMessage.background = null
                             waterMessage.setPadding(0, 0, 0, 0)
                         }
@@ -81,6 +84,13 @@ class SummaryActivity : AppCompatActivity() {
 // The bar stops at 100%,  if the recorded amount exceeds the goal.
                             val progress = ((totalWater.coerceAtMost(waterGoal) * 100) / waterGoal).toInt()
                             waterProgress.progress = progress
+                            if (totalWater < waterGoal) {
+                                val remaining = waterGoal - totalWater
+                                waterRemaining.text = "$remaining ml remaining to reach your goal"
+                                waterRemaining.visibility = android.view.View.VISIBLE
+                            } else {
+                                waterRemaining.visibility = android.view.View.GONE
+                            }
 
                             if (totalWater >= waterGoal) {
                                 waterMessage.text =

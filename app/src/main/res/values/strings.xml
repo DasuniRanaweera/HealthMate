@@ -26,4 +26,7 @@
     <string name="water_reminder">Water reminder</string>
     <string name="update_your_record">Update Your Record</string>
     <string name="update_record">Update Record</string>
+    <string name="water">Water</string>
+    <string name="calories">Calories</string>
+    <string name="steps">Steps</string>
 </resources>

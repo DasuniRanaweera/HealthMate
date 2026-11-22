@@ -97,4 +97,20 @@
         android:textColor="#075C60"
         android:textSize="18sp" />
 
+    <!-- dashboard png  -->
+    <Space
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <ImageView
+        android:id="@+id/dashboardIllustration"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_marginStart="-16dp"
+        android:layout_marginEnd="-16dp"
+        android:contentDescription="@null"
+        android:scaleType="fitEnd"
+        android:src="@drawable/dashboard_illustration" />
+
 </LinearLayout>
